@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chat_Bot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Task2_ChatBot.css" />
+  </head>
+  <body>
+    <!-- Animated Background Particles -->
+    <div class="bg-particles" id="particles"></div>
+
+    <!-- Floating Chat Icon -->
+    <div id="chatIcon" title="Chat with us!">
+      <svg viewBox="0 0 24 24" fill="none" class="animated-svg">
+        <path
+          d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.54 0 3-.3 4.38-.84l4.02 1.34c.22.07.46-.02.6-.22.14-.2.14-.47 0-.67L19.76 19C21.15 17.29 22 15.25 22 12c0-5.52-4.48-10-10-10z"
+          fill="white"
+          opacity="0.9"
+        />
+        <circle cx="8.5" cy="12" r="1.5" fill="#2563eb" />
+        <circle cx="12" cy="12" r="1.5" fill="#2563eb" />
+        <circle cx="15.5" cy="12" r="1.5" fill="#2563eb" />
+      </svg>
+    </div>
+
+    <!-- Chat Window -->
+    <div class="chat-container" id="chatContainer">
+      <div class="header">
+        <div class="bot-avatar">
+          <svg viewBox="0 0 24 24" width="24" height="24" class="animated-svg">
+            <circle cx="12" cy="8" r="4" fill="white" opacity="0.9" />
+            <path
+              d="M12 14c-4 0-6 2-6 4v2h12v-2c0-2-2-4-6-4z"
+              fill="white"
+              opacity="0.7"
+            />
+            <circle cx="10" cy="7" r="0.5" fill="#2563eb" />
+            <circle cx="14" cy="7" r="0.5" fill="#2563eb" />
+            <path
+              d="M10 9.5c0.5 0.5 1 0.5 2 0.5s1.5 0 2-0.5"
+              stroke="#2563eb"
+              stroke-width="0.5"
+              fill="none"
+            />
+          </svg>
+        </div>
+        <h1>Chat_Bot</h1>
+        <button class="close-btn" id="closeChat" title="Close">&times;</button>
+      </div>
+      <div class="rate-limit" id="rateLimitMsg" style="display: none"></div>
+      <div class="messages" id="messages">
+        <div class="message bot">
+          <div class="bubble">
+            <svg
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              class="animated-svg"
+            >
+              <circle cx="12" cy="8" r="4" fill="#2563eb" />
+              <path
+                d="M12 14c-4 0-6 2-6 4v2h12v-2c0-2-2-4-6-4z"
+                fill="#2563eb"
+                opacity="0.7"
+              />
+              <circle cx="10" cy="7" r="0.5" fill="white" />
+              <circle cx="14" cy="7" r="0.5" fill="white" />
+              <path
+                d="M10 9.5c0.5 0.5 1 0.5 2 0.5s1.5 0 2-0.5"
+                stroke="white"
+                stroke-width="0.5"
+                fill="none"
+              />
+            </svg>
+            <span>Hello! I'm your AI assistant. How can I help you today?</span>
+          </div>
+        </div>
+      </div>
+      <form class="input-area" id="chatForm" autocomplete="off">
+        <input
+          type="text"
+          id="userInput"
+          placeholder="Type your message..."
+          required
+          autocomplete="off"
+        />
+        <button type="submit" id="sendBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
